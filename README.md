@@ -9,6 +9,8 @@ Run composer update to install dependencies
 
 Configure .env file with your credentials (rename .env.example to .env)
 
+Run php artisan key:generate
+
 Create database 'test'
 
 Run php artisan migrate:refresh --seed // to create and fill db tables with test user or just run php artisan migrate
