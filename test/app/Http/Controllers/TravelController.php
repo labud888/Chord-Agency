@@ -27,19 +27,19 @@ class TravelController extends Controller {
 
 		//	\DB::enableQueryLog();
 
-		//	$postcodes = \App\Models\Postcodes::find($request->data);
+//	$postcodes = \App\Models\Postcodes::find($request->data);
 		/**
 		 * The referen.. as  starting point.
 		 * #$ref = array(49.648881, -103.575312);
 		 * @var array
 		 */
-		//	$ref = array($postcodes->latitude, $postcodes->longitude);
+//	$ref = array($postcodes->latitude, $postcodes->longitude);
 		/**
 		 * Get the colection of schools
 		 *
 		 * @return Schools
 		 */
-		//	$schools = \App\Models\Schools::whereNotNull('latitude')->get();
+//	$schools = \App\Models\Schools::whereNotNull('latitude')->get();
 
 		#trying to force mysql do the mat. :(
 
@@ -51,12 +51,12 @@ class TravelController extends Controller {
 		 *
 		 * @return distances
 		 */
-		//	$distances = $schools->map(function ($item, $key) use ($ref) {
-		//		$a = array_flatten(array_slice($item->toArray(), -2)); #if are latitude and longitude last two in the array return them
-		//		return $this->distance($a, $ref); # calculate distance
-		//	});
+//	$distances = $schools->map(function ($item, $key) use ($ref) {
+//		$a = array_flatten(array_slice($item->toArray(), -2)); #if are latitude and longitude last two in the array return them
+//		return $this->distance($a, $ref); # calculate distance
+//	});
 
-		//	$distances->all();
+//	$distances->all();
 
 		//	dd($ref, $distances, $schools->toArray());
 		$postcode = \App\Models\Postcodes::with('addresses', 'schools', 'busstops')->find($request->data);
