@@ -12,3 +12,4 @@ Installing
 7.Import .sql
 8.Run composer dump-autoload
 9.Run php artisan serve. This command will start a development server at http://localhost:8000:
+
