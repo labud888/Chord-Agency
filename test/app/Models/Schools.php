@@ -15,4 +15,9 @@ class Schools extends Model {
 	public function parent() {
 		return $this->belongsTo('App\Models\Postcodes');
 	}
+	public function parent_all() {
+		return $this->hasMany('App\Models\Postcodes', 'id', 'postcode_id')
+			->selectRaw(' id,latitude,longitude')
+			->orderByRaw('id');
+	}
 }
